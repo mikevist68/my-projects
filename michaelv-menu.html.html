@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MV-Nav</title>
+<style>
+body
+{
+  margin: 0;
+}
+
+/* Complete navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  font-family: Arial;
+  padding: 0px 80px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  border-bottom: 6px solid transparent;
+}
+
+/* Website Title */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  border-bottom: 3px solid transparent;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-links li:hover{
+  background-color: #70db70;
+  border-radius: 3px 3px 0px 0px;
+}
+
+/* When hover a navigation link, the border bottom color of complete navbar */
+nav:has(.nav-links li:hover) {
+  border-bottom: 6px solid #70db70;   
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #70db70;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  padding: 0px;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: none;
+  list-style-type: none;
+}
+.dropdown-content li:hover {
+  background-color: #196619;
+}
+
+.dropdown-content li a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.content img{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation Bar starts here -->
+<nav>
+
+  <!-- Logo/Website Title -->
+  <div class="logo">
+    <a href="#">Logo</a>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    
+    <!-- Dropdown Menu ABOUT Starts here -->
+    <li class="dropdown">
+      <a href="#">ABOUT</a>
+      <ul class="dropdown-content">
+        <li><a href="#">OUR STORY</a></li>
+        <li><a href="#">OUR COMMITMENT TO YOU</a></li>
+      </ul>
+    </li>
+
+    <!-- Dropdown Menu LOC Starts here -->
+    <li class="dropdown">
+      <a href="#">LOCATIONS</a>
+      <ul class="dropdown-content">
+        <li><a href="#">AUSTIN, TX</a></li>
+        <li><a href="#">ATLANTA, GA</a></li>
+        <li><a href="#">SEATTLE, WA</a></li>
+        <li><a href="#">PORTLAND, OR</a></li>
+      </ul>
+    </li>    
+    
+    <!-- Dropdown Menu PROD Starts here -->
+    <li class="dropdown">
+      <a href="#">PRODUCTS</a>
+      <ul class="dropdown-content">
+        <li><a href="#">NEW ARRIVALS</a></li>
+        <li><a href="#">FEATURED</a></li>
+        <li><a href="#">TOP RATED</a></li>
+        <li><a href="#">HIS</a></li>
+        <li><a href="#">HERS</a></li>
+        <li><a href="#">KIDS</a></li>
+        <li><a href="#">ACCESSORIES</a></li>
+        <li><a href="#">SPRING CATALOG</a></li>
+        <li><a href="#">THE ESSENTIALS</a></li>
+        <li><a href="#">SALE</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">BLOGS</a></li>
+    <li><a href="#">CONTACT</a></li>
+  
+  </ul>
+
+</nav>
+
+<!-- Background Image -->
+<div class="content">
+<img src="guw.jpg">
+</div>
+
+
+
+
+</body>
+</html>
